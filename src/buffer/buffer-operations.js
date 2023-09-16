@@ -256,7 +256,7 @@ class BufferOperations extends BufferSturcture {
         // taking string part
         const textArray = array.slice(4);
 
-        const processedArray = modificationFx([...textArray], stringDataObject);
+        const processedArray = modificationFx(new Uint8Array(textArray), stringDataObject);
 
         // Getting modification cost
         const modification = originalArrayLength - (processedArray.length + 4);
@@ -305,7 +305,7 @@ class BufferOperations extends BufferSturcture {
 
         const originalArrayLength = textArray.length;
 
-        const processedArray = modificationFx([...textArray], stringDataObject);
+        const processedArray = modificationFx(new Uint8Array(textArray), stringDataObject);
 
         // Getting modification cost
         const modification = originalArrayLength - processedArray.length;
